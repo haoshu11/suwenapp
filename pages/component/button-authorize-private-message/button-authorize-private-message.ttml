@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <text class="page-body-title">
+        主动授权私信
+      </text>
+      <view class="page-body-line">
+        <button open-type="authorizePrivateMessage" data-aweme-id="{{awemeId}}"
+          bindauthorizeprivatemessage="eventHandler"> 点击授权私信
+        </button>
+      </view>
+      <view class='page-body-text'>
+        获取结果：
+        {{result}}
+      </view>
+    </view>
+  </view>
+</view>

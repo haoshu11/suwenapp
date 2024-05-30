@@ -1,0 +1,4 @@
+.paste-placeholder {
+    color: #848484;
+    font-weight: 500;
+}

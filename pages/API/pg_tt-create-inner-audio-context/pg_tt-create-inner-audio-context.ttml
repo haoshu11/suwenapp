@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="body">
+    <view tt:if="{{ !isDestory }}" class="page-section page-section-space">
+      <view class="page-body-info">
+        <view class="play-time">
+          <text>已缓冲 {{buffered}}</text>
+          <text>已加载 X {{updateCount}}</text>
+          <text>总时长 {{formatedDuration}}</text>
+        </view>
+      </view>
+      <view class="page-body-buttons">
+        <block tt:if="{{playing === true}}">
+          <view class="page-body-button" bindtap="stop">
+            <image src="{{imageUrl+'stop.png'}}"></image>
+          </view>
+          <view class="page-body-button" bindtap="pause">
+            <image src="{{imageUrl+'pause.png'}}"></image>
+          </view>
+        </block>
+        <block tt:if="{{playing === false}}">
+          <view class="page-body-button"></view>
+          <view class="page-body-button" bindtap="play">
+            <image src="{{imageUrl+'play.png'}}"></image>
+          </view>
+        </block>
+        <view class="page-body-button"></view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title page-section-title-space">控制参数</view>
+      <view class="ttui-cells ttui-cells_after-title">
+        <view tt:if="{{ !isDestory }}">
+          <button tt:if="{{ !playing }}" class="op-btn play-btn" type="primary" bindtap="play">音频播放</button>
+          <button tt:if="{{ playing }}" class="op-btn pause-btn" type="primary" bindtap="pause">音频暂停</button>
+          <button tt:if="{{ playing }}" class="op-btn stop-btn" type="primary" bindtap="stop">音频停止</button>
+        </view>
+        <button class="op-btn create-btn" tt:if="{{ isDestory }}" type="primary" bindtap="create">
+          音频创建
+        </button>
+        <button class="op-btn destory-btn" tt:else type="primary" bindtap="destroy">
+          音频销毁
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

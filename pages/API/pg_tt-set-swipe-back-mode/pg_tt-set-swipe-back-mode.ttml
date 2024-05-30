@@ -1,0 +1,9 @@
+<view class="page-container">
+  <button
+    class="navigate-btn"
+    type="primary"
+    bindtap="handleNavigateToSetSwipeBackModePage"
+  >
+    返回上一级页面
+  </button>
+</view>

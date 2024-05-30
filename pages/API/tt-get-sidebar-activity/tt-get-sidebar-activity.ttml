@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <button bindtap="getSidebarActivity">获取活动id</button>
+      <view class="body" tt:if="{{activity}}">
+        <text class="title">获取活动id：{{activity}}</text>
+      </view>
+    </view>
+  </view>
+</view>

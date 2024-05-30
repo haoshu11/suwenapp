@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="body body-space">
+    <view class="button-category">
+      <view class="category-title">type</view>
+      <button type="primary">页面主操作 Normal</button>
+      <button type="primary" loading="true">页面主操作 Loading</button>
+      <button type="primary" disabled="true">页面主操作 Disabled</button>
+      <button type="default">页面次要操作 Normal</button>
+      <button type="default" loading="true">页面次要操作 Loading</button>
+      <button type="default" disabled="true">页面次要操作 Disabled</button>
+    </view>
+    <view class="button-category">
+      <view class="category-title">size</view>
+      <view class="mini-buttons">
+        <button class="mini-btn" type="primary" size="mini">按钮</button>
+        <button class="mini-btn" type="default" size="mini">按钮</button>
+      </view>
+    </view>
+    <view class="button-category">
+      <view class="category-title">form-type</view>
+      <form bindsubmit="submit" bindreset="reset">
+        <button form-type="submit" type="primary">submit</button>
+        <button form-type="reset" type="default">reset</button>
+      </form>
+    </view>
+    <view class="button-category">
+      <view class="category-title">open-type</view>
+      <button open-type="share" type="primary">分享给好友</button>
+      <button bindtap="login" disabled="{{isLogin}}">{{isLogin ? "已登录" : "登录"}}</button>
+    </view>
+  </view>
+</view>

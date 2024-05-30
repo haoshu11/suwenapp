@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="title">当前页面的路由层级：{{length}}</view>
+  <view class="title">点击左上角返回按钮，弹框确认返回。</view>
+  <text>
+    Tip：返回询问对话框只会对调用的当前页面生效；
+    Tip：通过手势滑动返回时不会弹起询问对话框。
+  </text>
+</view>

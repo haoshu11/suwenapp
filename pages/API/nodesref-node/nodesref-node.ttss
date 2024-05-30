@@ -1,0 +1,25 @@
+#myCanvas {
+    height: 80px;
+    line-height: 80px;
+}
+
+.title {
+    text-align: justify;
+    background-color: white;
+    padding: 20rpx 30rpx;
+    margin: 10rpx auto;
+}
+
+.node-info-list {
+    padding: 0 30px;
+    word-wrap: break-word;
+}
+
+.node-info-list .list-title,
+.node-info-list .list-item {
+    height: 50rpx;
+    line-height: 50rpx;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    overflow: auto;
+}

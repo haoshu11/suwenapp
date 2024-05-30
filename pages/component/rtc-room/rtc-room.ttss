@@ -1,0 +1,62 @@
+.title {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .rtc-item {
+    width: 120px;
+    height: 90px;
+    border: 1px solid red;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .rtc-container {
+    height: 94px;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+  
+  .rtc-api {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .rtc-api-name {
+    display: inline;
+    color: white;
+    background-color: #1890ff;
+    font-size: 10px;
+    border-radius: 2px;
+  }
+  
+  .room-message {
+    font-size: 10px;
+  }
+  
+  button {
+    font-size: 12px;
+    background-color: white;
+    color: #ff4d4f;
+    border: 1px solid #ff4d4f;
+  }
+  
+  .token {
+    word-wrap: break-word;
+  }
+  
+  .rtc-select {
+    border: 2px solid black;
+    position: fixed;
+    top: 140px;
+    width: 100%;
+    left: 0px;
+    height: calc(100% - 150px);
+    z-index: 100;
+  }
+  
+  .rtc-default {
+    border: 2px solid blue;
+  }

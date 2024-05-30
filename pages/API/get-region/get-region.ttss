@@ -1,0 +1,5 @@
+.info-space {
+    background-color: #fff;
+    padding: 15rpx;
+    box-sizing: border-box;
+}

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="body">
+    <text class="text-space">剩余录音时间 {{ cd }}ms</text>
+    <view class="btn-area">
+      <button type="primary" bindtap="start">start</button>
+    </view>
+    <view tt:if="{{errMsg}}" class="text-space">
+      <text>{{errMsg}}</text>
+    </view>
+    <view tt:elif="{{isStart}}" class="text-space">
+      <text>再次点击start按钮触发onError回调用</text>
+    </view>
+  </view>
+</view>

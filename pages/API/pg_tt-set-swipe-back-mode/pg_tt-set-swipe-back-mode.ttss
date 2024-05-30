@@ -1,0 +1,3 @@
+.page-container .navigate-btn {
+	margin: 25rpx 15rpx;
+}

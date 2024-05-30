@@ -1,0 +1,37 @@
+.content {
+  color: #999999;
+  font-size: 15px;
+}
+.left {
+  float: left;
+  width: 320rpx;
+  height: 800rpx;
+  margin-right: 20rpx;
+  text-align: center;
+}
+.right {
+  float: right;
+  width: 320rpx;
+  height: 800rpx;
+  margin-left: 20rpx;
+  text-align: center;
+}
+.center {
+  height: 800rpx;
+  overflow: hidden;
+}
+.line {
+  height: 800rpx;
+  width: 5rpx;
+  margin: 0 auto;
+  background-color: #999999;
+}
+.title {
+  display: inline-block;
+}
+.message {
+  padding-top: 20rpx;
+}
+.listener {
+  height: 720rpx;
+}

@@ -1,0 +1,8 @@
+.title {
+    background-color: white;
+    padding: 20rpx 30rpx;
+}
+.intro{
+    color: gray;
+    padding: 20rpx 30rpx;
+}

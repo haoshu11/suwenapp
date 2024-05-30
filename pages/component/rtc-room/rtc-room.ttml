@@ -1,0 +1,82 @@
+<view class="title">rtc 组件</view>
+
+<view class="rtc-container">
+  <view>组件错误信息: {{ error }}</view>
+  <rtc-room tt:for="{{userIdList}}" tt:key="item.userId" id="{{ item.userId }}" class="rtc-item {{ item.class }}"
+    userId="{{ item.userId }}" device-position="front" bindtap="scaleCamera" binderror="handleError"
+    mode="{{ item.mode }}">
+  </rtc-room>
+</view>
+
+<view>
+  <input></input>
+</view>
+
+<view class="title">房间信息</view>
+<view class="rtc-api-name">appId</view>
+<view class="room-message">{{ appId }}</view>
+<view class="rtc-api-name">token</view>
+<view class="room-message token">{{ token }}</view>
+<view class="rtc-api-name">roomId</view>
+<view class="room-message">{{ roomId }}</view>
+<view class="rtc-api-name">useId</view>
+<view class="room-message">{{ userId }}</view>
+
+<view class="title">rtc Api</view>
+<view class="rtc-api-name">api名称: joinRtcRoom</view>
+<button class="rtc-api" type="default" size="default" bindtap="joinRtcRoom">加入房间</button>
+
+<view class="rtc-api-name">api名称: exitRtcRoom</view>
+<button class="rtc-api" type="default" size="default" bindtap="exitRtcRoom">退出房间</button>
+
+<view class="rtc-api-name">api名称: switchCamera</view>
+<button class="rtc-api" type="default" size="default" bindtap="switchCamera">切换前后置摄像头</button>
+
+<view class="rtc-api-name">api名称: changeVideoCapture</view>
+<button class="rtc-api" type="default" size="default" bindtap="changeVideoCapture">切换开启/关闭摄像头采集</button>
+
+<view class="rtc-api-name">api名称: changeAudioCapture</view>
+<button class="rtc-api" type="default" size="default" bindtap="changeAudioCapture">切换开启/关闭麦克风采集</button>
+
+<view class="rtc-api-name">api名称: changeUserVisibility</view>
+<button class="rtc-api" type="default" size="default" bindtap="changeUserVisibility">切换用户是否对房间内其他用户可见</button>
+
+<view class="rtc-api-name">api名称: setVideoEncoderConfig</view>
+<button class="rtc-api" type="default" size="default" bindtap="setVideoEncoderConfig">设置视频发布的最大视频流参数</button>
+
+<view class="rtc-api-name">api名称: setAudioPlaybackDevice</view>
+<button class="rtc-api" type="default" size="default" bindtap="setAudioPlaybackDevice">切换音频播放设备</button>
+
+<view class="rtc-api-name">api名称: changeStreamPublishState</view>
+<button class="rtc-api" type="default" size="default" bindtap="changeStreamPublishState">切换开启/关闭发布流</button>
+
+<view class="rtc-api-name">api名称: changeStreamSubscribeState</view>
+<button class="rtc-api" type="default" size="default" bindtap="changeStreamSubscribeState">切换开启/关闭订阅流</button>
+
+<view class="rtc-api-name">api名称: changeScreenSubscribeState</view>
+<button class="rtc-api" type="default" size="default" bindtap="changeScreenSubscribeState">切换开启/关闭订阅屏幕流</button>
+
+<view class="rtc-api-name">api名称: updateToken</view>
+<button class="rtc-api" type="default" size="default" bindtap="updateToken">更新 token</button>
+
+<view class="rtc-api-name">api名称: offRtcVideoMembersChanged</view>
+<button class="rtc-api" type="default" size="default" bindtap="offRtcVideoMembersChanged">取消订阅视频成员变化</button>
+
+<view class="rtc-api-name">api名称: offRtcChatMembersChanged</view>
+<button class="rtc-api" type="default" size="default" bindtap="offRtcChatMembersChanged">取消订阅音频(在线、离线)</button>
+
+<view class="rtc-api-name">api名称: offRtcChatSpeakersChanged</view>
+<button class="rtc-api" type="default" size="default" bindtap="offRtcChatSpeakersChanged">取消订阅音频(开始、停止说话)</button>
+
+<view class="rtc-api-name">api名称: offRtcStateChanged</view>
+<button class="rtc-api" type="default" size="default" bindtap="offRtcStateChanged">取消订阅状态变化</button>
+
+<view class="rtc-api-name">api名称: offRtcChatInterrupted</view>
+<button class="rtc-api" type="default" size="default" bindtap="offRtcChatInterrupted">取消监听被动断开实时音视频通话事件</button>
+
+<view class="rtc-api-name">api名称: offRtcPublishScreenMembersChanged</view>
+<button class="rtc-api" type="default" size="default"
+  bindtap="offRtcPublishScreenMembersChanged">取消监听实时共享屏幕用户改变事件</button>
+
+<view class="rtc-api-name">api名称: offRoomTokenWillExpire</view>
+<button class="rtc-api" type="default" size="default" bindtap="offRoomTokenWillExpire">取消监听房间token即将过期通知事件</button>

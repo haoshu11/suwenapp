@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="body">
+    <text class="text-space">剩余录音时间 {{ cd }}ms</text>
+    <view class="btn-area">
+      <button type="primary" bindtap="start" disabled="{{ isStart }}">start</button>
+      <button type="primary" bindtap="pause" tt:if="{{ isPlay }}">pause</button>
+      <button type="primary" bindtap="resume" tt:if="{{ !isPlay }}" disabled="{{ !isStart }}">resume</button>
+      <button type="primary" bindtap="stop" disabled="{{ !isStart }}">stop</button>
+    </view>
+
+    <view class="frame-buffer-list" tt:if="{{ frameBufferList.length > 0 }}">
+      监听已录制完指定帧大小的文件事件：
+      <view
+        class="frame-list-item"
+        tt:for="{{ frameBufferList }}"
+        tt:for-item="item"
+        tt:for-index="index"
+      >
+        <view>frameBuffer: {{ item.frameBuffer }}</view>
+        <view>isLastFrame: {{ item.isLastFrame }}</view>
+      </view>
+    </view>
+  </view>
+</view>

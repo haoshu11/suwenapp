@@ -1,0 +1,22 @@
+<view class="wrap">
+	<video id="myVideo" enable-danmu="true"
+		src="https://sf1-ttcdn-tos.pstatp.com/obj/developer/sdk/1534422848153.mp4"></video>
+	<view class="controls-group">
+		<button type="primary" bindtap="play">play</button>
+		<button type="primary" bindtap="stop">stop</button>
+		<button type="primary" bindtap="pause">pause</button>
+		<button type="primary" bindtap="seek">seek</button>
+
+		<button type="primary" bindtap="getMediaVolume">getMediaVolume</button>
+		<text>设置视频音量:</text>
+		<input class="column-control-input" type="digit" min="0" max="1" placeholder="设置视频音量 (范围: 0-1)"
+			value="{{videoVolume}}" bindblur="setVideoVolume" />
+		<radio-group class="play-rate-select-list" name="playbackRate" bindchange="setPlayBackRate">
+			<text>倍速：</text>
+			<radio tt:for="{{playbackRateList}}" tt:for-item="item" tt:for-index="index" tt:key="{{item}}"
+				value="{{item}}" checked="{{item === playbackRate}}">
+				{{item}}X
+			</radio>
+		</radio-group>
+	</view>
+</view>

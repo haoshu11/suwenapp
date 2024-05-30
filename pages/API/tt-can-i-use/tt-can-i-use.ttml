@@ -1,0 +1,24 @@
+<view class="content">
+    <view class="title">点击判断小程序的 API，回调，参数，组件等是否在当前版本可用。</view>
+    <view class="title">当前基础库版本为：{{sdkVersion}}</view>
+    <view class="type">对象的属性或方法</view>
+    <button type="primary" size="default" data-data="UpdateManager" bindtap="canIUse"> UpdateManager </button>
+    <button type="primary" size="default" data-data="Stats.isDirectory" bindtap="canIUse"> Stats.isDirectory </button>
+    <view class="type">tt 接口参数、回调或者返回值</view>
+    <button type="primary" size="default" data-data="exitMiniProgram" bindtap="canIUse"> exitMiniProgram </button>
+    <button type="primary" size="default" data-data="getLaunchOptionsSync.return.path" bindtap="canIUse"> getLaunchOptionsSync.return.path </button>
+    <button type="primary" size="default" data-data="getSystemInfo.success.screenWidth" bindtap="canIUse"> getSystemInfo.success.screenWidth </button>
+    <button type="primary" size="default" data-data="showToast.object.title" bindtap="canIUse"> showToast.object.title </button>
+    <button type="primary" size="default" data-data="onCompassChange.callback.direction" bindtap="canIUse"> onCompassChange.callback.direction </button>
+    <button type="primary" size="default" data-data="request.object.method.GET" bindtap="canIUse"> request.object.method.GET </button>
+    <view class="type">组件及其属性</view>
+    <button type="primary" size="default" data-data="swiper" bindtap="canIUse"> swiper </button>
+    <button type="primary" size="default" data-data="text.selectable" bindtap="canIUse"> text.selectable </button>
+    <button type="primary" size="default" data-data="button.open-type.contact" bindtap="canIUse"> button.open-type.contact </button>
+    <view class="type">Page 函数 this 上的方法</view>
+    <button type="primary" size="default" data-data="Page.provide" bindtap="canIUse"> Page.provide </button>
+    <button type="primary" size="default" data-data="Page.setProvide" bindtap="canIUse"> Page.setProvide </button>
+    <view class="type">Component 函数 this 上的方法</view>
+    <button type="primary" size="default" data-data="Component.inject" bindtap="canIUse"> Component.inject </button>
+    <button type="primary" size="default" data-data="Component.observers" bindtap="canIUse"> Component.observers </button>
+</view>

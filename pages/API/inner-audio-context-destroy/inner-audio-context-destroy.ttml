@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="body">
+    <view class="page-section page-section-space">
+      <view class="page-body-buttons">
+        <block tt:if="{{playing === true}}">
+          <view class="page-body-button" bindtap="stop">
+            <image src="{{imageUrl+'stop.png'}}"></image>
+          </view>
+          <view class="page-body-button" bindtap="pause">
+            <image src="{{imageUrl+'pause.png'}}"></image>
+          </view>
+        </block>
+        <block tt:if="{{playing === false}}">
+          <view class="page-body-button"></view>
+          <view class="page-body-button" bindtap="play">
+            <image src="{{imageUrl+'play.png'}}"></image>
+          </view>
+        </block>
+        <view class="page-body-button"></view>
+      </view>
+      <view class="page-body-buttons">
+        <button tt:if="{{ innerAudioContext }}" type="primary" bindtap="destroy" style="width: 90vw;"> 销毁当前 innerAudioContext 实例 </button>
+        <button tt:else type="primary" bindtap="create" style="width: 90vw;"> 创建 innerAudioContext 实例 </button>
+      </view>
+    </view>
+    
+  </view>
+</view>

@@ -1,0 +1,14 @@
+.picker{
+    padding: 19rpx 26rpx;
+    background-color: #FFFFFF;
+}
+.input {
+    padding: 19rpx 26rpx;
+    background-color: #FFFFFF;
+}
+.radio{
+    padding: 19rpx 26rpx;
+}
+.page-section {
+    margin-bottom: 32rpx;
+}

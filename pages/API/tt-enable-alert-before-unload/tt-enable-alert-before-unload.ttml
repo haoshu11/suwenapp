@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="title">当前页面的路由层级：{{length}}</view>
+  <view class="btn-area">
+    <button type="primary" bindtap="goNext">跳转下一页查看效果</button>
+  </view>
+</view>

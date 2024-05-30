@@ -1,0 +1,9 @@
+.container {
+  padding: 50rpx 30rpx;
+}
+
+.title {
+  background-color: white;
+  padding: 20rpx 30rpx;
+  margin-top: 40rpx;
+}

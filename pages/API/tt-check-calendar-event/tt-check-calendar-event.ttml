@@ -1,0 +1,47 @@
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">日历事件的标题</view>
+    <input class="input" type="text" bindinput="handleTitleInput" />
+</view>
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">请选择日历事件的开始日期</view>
+    <picker mode="date" value="{{startTimeDate}}" bindchange="bingStartTimeDateChange" fields="day">
+        <view class="picker">
+            当前选择: {{startTimeDate}}
+        </view>
+    </picker>
+</view>
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">请选择日历事件的开始时间</view>
+    <picker mode="time" value="{{startTimeTime}}" bindchange="bingStartTimeTimeChange">
+        <view class="picker">
+            当前选择: {{startTimeTime}}
+        </view>
+    </picker>
+</view>
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">请选择日历事件的结束日期（可选）</view>
+    <picker mode="date" value="{{endTimeDate}}" bindchange="bingEndTimeDateChange" fields="day">
+        <view class="picker">
+            当前选择: {{endTimeDate}}
+        </view>
+    </picker>
+</view>
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">请选择日历事件的结束时间（可选）</view>
+    <picker mode="time" value="{{endTimeTime}}" bindchange="bingEndTimeTimeChange">
+        <view class="picker">
+            当前选择: {{endTimeTime}}
+        </view>
+    </picker>
+</view>
+<view class="btn-area">
+    <button type="primary" bindtap="checkCalendar">checkCalendar</button>
+</view>
+<view class="ttui-cell mt">
+    <view class="ttui-cell__hd">
+      <view class="ttui-label">结果</view>
+    </view>
+    <view class="ttui-cell__bd">
+      <text class="ttui-input">{{result}}</text>
+    </view>
+  </view>

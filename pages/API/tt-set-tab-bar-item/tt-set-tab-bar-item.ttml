@@ -1,0 +1,5 @@
+<view class="control-area">
+  <view class="btn-area">
+    <button bindtap="setTabBatItem">{{showCustom?"清除自定义内容":"自定义TabBar"}}</button>
+  </view>
+</view>

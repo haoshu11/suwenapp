@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="tips">
+    当用户打开小程序为一级页面，会露出小程序 logo，如果此时为非首页，点击 logo 会回到首页。
+    <br />
+    开发者可在页面 onShow 中调用 hideHomeButton 关闭返回首页的能力，但不影响左上角小程序 logo 按钮的露出。
+  </view>
+  <view class="btn">
+    <button type="primary" size="default" bindtap="hideHome" disabled="{{ show }}">
+      禁用返回首页能力
+    </button>
+  </view>
+</view>

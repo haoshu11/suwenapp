@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="title">当前页面的路由层级：{{length}}</view>
+  <view class="intro">reLaunch 跳转页面后将关闭所有页面，打开应用内的某个页面。</view>
+  <view class="btn-area">
+    <button type="primary" bindtap="toRoute">reLaunch跳转页面</button>
+  </view>
+</view>

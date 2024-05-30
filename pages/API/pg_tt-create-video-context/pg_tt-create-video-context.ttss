@@ -1,0 +1,45 @@
+.wrap {
+    padding: 50rpx 30rpx;
+}
+
+.wrap video {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 30rpx;
+}
+
+.wrap .controls-group {
+    margin-top: 430rpx;
+}
+
+.wrap button {
+    margin-bottom: 50rpx;
+}
+
+.wrap .exit-fullscreen-btn {
+    z-index: 888;
+}
+
+.wrap .column-control-input {
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  box-shadow: 0 0 5rpx #d3d3d3;
+  border-radius: 10rpx;
+}
+
+.wrap .play-rate-select-list {
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+}
+
+.wrap .play-rate-select-list radio {
+  margin-right: 15rpx;
+}

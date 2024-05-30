@@ -1,0 +1,3 @@
+<button type="primary" bindtap="startRecord">开始录音</button>
+<button type="primary" bindtap="stopRecord">停止录音</button>
+<view>录音状态：{{status}}</view>

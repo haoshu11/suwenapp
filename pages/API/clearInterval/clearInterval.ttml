@@ -1,0 +1,21 @@
+<view class="content">
+    <view class="title">定时时间，回调函数每隔 1s 执行一次。</view>
+    <button type="primary" size="default" bindtap="clearInterval" tt:if="{{ id !== 0 }}"> 清除定时器 </button>
+    <button type="primary" size="default" bindtap="setInterval" tt:else>设置定时器</button>
+
+    <view class="log-list-content">
+        <scroll-view class="result-wrap" scroll-y="true">
+            <view class="result-wrap-item" tt:for="{{ logList }}" tt:for-item="item" tt:for-index="index"
+                tt:key="index">
+                <view class="timeline">
+                    <view class="circle"></view>
+                    <view class="line" tt:if="{{ index !== logList.length - 1 }}"></view>
+                </view>
+                <view class="content">
+                    <view class="result">{{ item.content }}</view>
+                    <view class="result">{{ item.date }}</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

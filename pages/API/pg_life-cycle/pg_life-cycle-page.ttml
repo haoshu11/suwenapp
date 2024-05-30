@@ -1,0 +1,5 @@
+<view class="container">
+    <view class="btn-area">
+      <button type="primary" bindtap="navigateBack">返回上一页触发onShow</button>
+    </view>
+</view>

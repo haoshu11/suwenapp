@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="body">
+    <view class="page-section page-section-space">
+      <view class="tips">点击停止按钮停止音乐</view>
+      <view class="page-body-buttons">
+        <view class="page-body-button-play {{ playing ? 'btn-disabled' : '' }}" bindtap="play">
+          <image src="{{imageUrl+'play.png'}}"></image>
+          <view class="label">播放</view>
+        </view>
+        <view class="page-body-button-stop {{ (playing || pause) ? '' : 'btn-disabled' }}" bindtap="stop">
+          <image src="{{imageUrl+'stop.png'}}"></image>
+          <view class="label">停止</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

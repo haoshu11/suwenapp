@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="body">
+        <view class="page-section page-section-space">
+            <view >
+                <scroll-view class="result-wrap" scroll-y="true">
+                    <view tt:for={{text}}>
+                        <view class="timeline">
+                            <view class="circle"></view>
+                            <view class="line" tt:if="{{index !== text.length-1}}"></view>
+                        </view>
+                        <view class="content">
+                            <view class="result">{{item.lifeCycle}}</view>
+                            <view class="result">{{item.date}}</view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="btn-area">
+                <button type="primary" bindtap="onItemClick">navigateTo跳转页面触发onHide</button>
+            </view>
+        </view>
+    </view>
+</view>

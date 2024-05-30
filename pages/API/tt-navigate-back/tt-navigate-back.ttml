@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="title">当前页面的路由层级：{{length}}</view>
+  <view class="intro">navigateBack 可以返回上一页面或多级页面，但第一个页面不能使用 navigateBack。</view>
+  <view class="btn-area">
+    <button type="primary" bindtap="onItemClick">navigateTo跳转至navigateBack页面</button>
+    <button type="primary" bindtap="navigateBack">navigateBack返回上一页</button>
+  </view>
+</view>

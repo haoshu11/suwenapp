@@ -1,0 +1,3 @@
+<view class="content">
+    <button type="primary" size="default" bindtap="offAppLaunch"> 取消监听小程序启动事件 </button>
+</view>

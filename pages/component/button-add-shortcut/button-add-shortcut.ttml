@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="page-body">
+        <view class="page-body-wrapper">
+            <text class="page-body-title">
+                添加桌面快捷方式
+            </text>
+            <view class="page-body-line">
+                <button open-type="addShortcut" bindaddshortcut="eventHandler">
+                    点击添加到桌面
+                </button>
+            </view>
+            <view class='page-body-text'>
+                获取结果：
+                {{result}}
+            </view>
+        </view>
+    </view>
+</view>

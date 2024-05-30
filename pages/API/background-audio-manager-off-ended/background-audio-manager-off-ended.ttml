@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="body body-bg">
+    <view class="page-section page-section-space">
+      <view class="page-body-buttons">
+        <block tt:if="{{playing === true}}">
+          <view class="page-body-button" bindtap="stop">
+            <image src="{{imageUrl+'stop.png'}}"></image>
+          </view>
+          <view class="page-body-button" bindtap="pause">
+            <image src="{{imageUrl+'pause.png'}}"></image>
+          </view>
+        </block>
+        <block tt:if="{{playing === false}}">
+          <view class="page-body-button"></view>
+          <view class="page-body-button" bindtap="play">
+            <image src="{{imageUrl+'play.png'}}"></image>
+          </view>
+        </block>
+        <view class="page-body-button"></view>
+      </view>
+      <view class="page-section-title page-section-title-space">
+        <text tt:if="{{ isBindCallback }}">已监听背景音频自然播放结束事件，结束时会有 toast 弹出</text>
+        <text tt:else>点击按钮监听背景音频自然播放结束事件</text>
+      </view>
+    </view>
+    <button tt:if="{{ isBindCallback }}" class="off-ended-btn" type="primary" bindtap="offEnded">offEnded</button>
+    <button tt:else class="on-ended-btn" type="primary" bindtap="onEnded">onEnded</button>
+  </view>
+</view>

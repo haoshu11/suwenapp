@@ -1,0 +1,25 @@
+<view class="content">
+    <view class="title">点击判断小程序的 API，回调，参数，组件等是否在当前版本可用。</view>
+    <view class="title">当前基础库版本为：{{sdkVersion}}</view>
+    <view class="type">对象的属性或方法</view>
+    <button type="primary" size="default" data-data="UpdateManager" bindtap="canIUse">
+        UpdateManager
+    </button>
+    <button type="primary" size="default" data-data="CameraContext.onCameraFrame" bindtap="canIUse">
+        CameraContext.onCameraFrame
+    </button>
+    <view class="type">tt 接口参数、回调或者返回值</view>
+    <button type="primary" size="default" data-data="connectSocket" bindtap="canIUse"> connectSocket </button>
+    <button type="primary" size="default" data-data="exitMiniProgram" bindtap="canIUse"> exitMiniProgram </button>
+    <button type="primary" size="default" data-data="getLaunchOptionsSync.return.path" bindtap="canIUse">
+        getLaunchOptionsSync.return.path
+    </button>
+    <button type="primary" size="default" data-data="getSystemInfo.success.screenWidth" bindtap="canIUse">
+        getSystemInfo.success.screenWidth
+    </button>
+    <button type="primary" size="default" data-data="showToast.object.title" bindtap="canIUse"> showToast.object.title
+    </button>
+    <button type="primary" size="default" data-data="onCompassChange.callback.direction" bindtap="canIUse">
+        onCompassChange.callback.direction
+    </button>
+</view>

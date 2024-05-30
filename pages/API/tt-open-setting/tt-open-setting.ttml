@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="body">
+    <view class="btn-area">
+      <button type="primary" bindtap="handleAuthToGetLocation" disabled="{{isAuth}}">点击获取地图授权</button>
+      <button type="primary" bindtap="openSetting">打开设置页面</button>
+    </view>
+  </view>
+</view>

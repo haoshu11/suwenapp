@@ -1,0 +1,11 @@
+<view class="content">
+    <text class="title">小程序启动参数:</text>
+    <view class="attr-wrap">
+        <text class="attr">scene: {{launchQuery.scene}}</text>
+        <text class="attr">path: {{launchQuery.path}}</text>
+        <text class="attr">query: {{launchQuery.query}}</text>
+        <text class="attr">referrerInfo: {{launchQuery.referrerInfo}}</text>
+        <text class="attr">showFrom: {{launchQuery.showFrom}}</text>
+    </view>
+    <button size="default" class="clear-btn" bindtap="clearAllAttr" disabled="{{!launchQuery.path}}"> 清空上面参数 </button>
+</view>

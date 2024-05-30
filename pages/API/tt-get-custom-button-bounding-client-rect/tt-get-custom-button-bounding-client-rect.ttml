@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <view class="page-body-info">
+          <text class="page-body-text-small">自定义导航栏下不可改变的元素的位置信息</text>
+          <text class="page-body-text-small">左上角 logo/返回的位置信息</text>
+          <view class="page-body-text" tt:for='{{leftIconKeys}}' tt:for-item="item" tt:for-index="index" tt:key="{{item}}">{{item}}: {{leftIconInfo[item]}}</view>
+          <text class="page-body-text-small">右上角反馈+more+close 的位置信息</text>
+          <view class="page-body-text" tt:for='{{capsuleKeys}}' tt:for-item="item" tt:for-index="index" tt:key="{{item}}">{{item}}: {{capsuleInfo[item]}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="getCustomButtonInfo">获取信息</button>
+    </view>
+  </view>
+</view>

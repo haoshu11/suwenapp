@@ -1,0 +1,9 @@
+#sv .page-section-title-space.page-section-title {
+    position: fixed;
+    top: 10rpx;
+    left: 20rpx;
+}
+
+.switch-btn {
+    margin: 50rpx 25px 10px;
+}

@@ -1,0 +1,6 @@
+<view class="cont">
+  <button type="primary" bindtap="checkFollowAwemeState">
+    是否关注抖音号
+  </button>
+  <text>注：检查关注抖音号状态需要先为小程序绑定品牌号或员工号，然后即可调用平台提供的接口进行开发</text>
+</view>

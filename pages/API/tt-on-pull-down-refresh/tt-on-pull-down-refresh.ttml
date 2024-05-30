@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="body">
+    <view class="page-section page-section-space">
+      <view class="page-body-info">
+        <text class="page-body-text">下滑页面即可刷新</text>
+      </view>
+      <view class="btn-area">
+        <button bindtap="startPullDownRefresh">下拉刷新</button>
+        <button bindtap="stopPullDownRefresh">取消下拉刷新</button>
+      </view>
+    </view>
+  </view>
+</view>

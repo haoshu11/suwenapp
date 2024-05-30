@@ -1,0 +1,18 @@
+<view class="container">
+	<view class="body">
+    <view class="page-section-title page-section-title-space">监听类型包括：'paint', 'evaluate', 'navigation', 'resource','mark'</view>
+
+    <view class="page-section-space" tt:for="{{entries}}" tt:for-item="entry">
+      <view>性能点：{{entry.name}}</view>
+      <view class="statsAttrItem" tt:for="{{entry}}">
+        {{index}}: {{item}}
+      </view>
+    </view>
+
+     <view class="btn-area">
+      <view class="body-view page-section">
+        <button type="primary" bindtap="disconnectObserver" >disconnect</button>
+      </view>
+    </view>
+  </view>
+</view>

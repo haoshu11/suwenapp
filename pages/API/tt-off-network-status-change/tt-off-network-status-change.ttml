@@ -1,0 +1,16 @@
+<view class="container">
+    <view class="page-body">
+      <view class="page-section">
+        <view class="page-body-info">
+          <view class="page-body-title">网络状态</view>
+          <block tt:if="{{isConnected === false}}">
+            <text class="page-body-text">没有网络连接</text>
+          </block>
+          <block tt:if="{{isConnected === true}}">
+            <text class="page-body-text-network-type">{{networkType}}</text>
+          </block>
+        </view>
+      </view>
+      <button type="primary" bindtap="offChange">取消监听网络状态变化</button>
+    </view>
+  </view>

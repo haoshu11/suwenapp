@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="page-body">
+        <view class="page-body-wrapper">
+            <text class="page-body-title">
+                点击跳转平台客服
+            </text>
+            <view class="page-body-line">
+                <button open-type="platformIm" data-platform-im-type="group_buy" bindplatformim="platformimHandler"
+                    binderror="platformimHandler"> 跳转平台客服
+                </button>
+            </view>
+            <view class='page-body-text'>
+                获取结果：
+                {{result}}
+            </view>
+        </view>
+    </view>
+</view>

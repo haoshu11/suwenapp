@@ -1,0 +1,11 @@
+<view class="content">
+    <text class="title">监听小程序错误事件:</text>
+    <view class="result-wrap">
+        <view class="result" tt:if="{{isOffError}}">已取消监听</view>
+        <view class="result" tt:else>{{err ? err : '事件监听中...'}}</view>
+    </view>
+    <button type="primary" size="default" bindtap="handleTap" tt:if="{{ err.length === 0 || isOffError }}"> 触发错误 </button>
+    <button size="default" class="clear-btn" bindtap="clearErr" tt:if="{{ err.length !== 0 && !isOffError }}"> 清空报错结果 </button>
+    <button type="primary" size="default" bindtap="offError" tt:if="{{ !isOffError }}"> 取消监听错误事件 </button>
+    <button type="primary" size="default" bindtap="onError" tt:else> 监听错误事件 </button>
+</view>

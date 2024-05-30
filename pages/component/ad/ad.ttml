@@ -1,0 +1,32 @@
+<view class="body-space ad-display-page">
+  <view class="page-session">
+    <view class="page-section-title page-section-title-space">
+      <text>广告示例</text>
+    </view>
+    <ad
+      unit-id="{{unitId}}"
+      bindload="bindload"
+      binderror="binderror"
+      bindclose="bindclose"
+      ad-intervals="{{adIntervals}}"
+      fixed="{{fixed}}"
+      type="{{type}}"
+      scale="{{scale}}"
+    />
+  </view>
+  <view class="component-tool-box">
+    <view class="page-session">
+      <view class="page-section-title page-section-title-space">广告位id：{{ unitId }}</view>
+    </view>
+  </view>
+  <view class="component-tool-box">
+    <view class="page-session">
+      <view class="page-section-title page-section-title-space">广告自动刷新的间隔时间：{{ adIntervals }}</view>
+      <input
+        value="{{adIntervals}}"
+        type="number"
+        bindblur="bindChangeAdIntervals"
+      />
+    </view>
+  </view>
+</view>

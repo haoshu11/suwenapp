@@ -1,0 +1,10 @@
+.body {
+  padding: 30rpx;
+  background: #fff;
+}
+
+.tips {
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+  color: #666;
+}

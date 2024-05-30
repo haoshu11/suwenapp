@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="btn-area">
+    <view class="tip">断网状态下创建socket触发onError</view>
+    <button type="primary" bindtap="createSocket">创建socket</button>
+    <button type="primary" disabled="{{socketStatus != 'open'}}" bindtap="sendMessage">发送消息</button>
+  </view>
+</view>

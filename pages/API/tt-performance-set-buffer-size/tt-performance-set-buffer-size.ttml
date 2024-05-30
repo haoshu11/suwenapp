@@ -1,0 +1,18 @@
+<view class="container">
+	<view class="body">
+    <view class="page-section-title page-section-title-space">setBufferSize</view>
+
+    <view class="page-section-space">
+      <view>默认缓存页面数：20</view>
+      <view class="statsAttrItem" >
+        {{'当前设置缓存页面数：'}}: {{pageNumber}}
+      </view>
+    </view>
+
+     <view class="btn-area">
+      <view class="body-view page-section">
+        <button type="primary" bindtap="setBufferSize" >setBufferSize</button>
+      </view>
+    </view>
+  </view>
+</view>

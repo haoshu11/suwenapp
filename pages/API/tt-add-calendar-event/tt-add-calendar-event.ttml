@@ -1,0 +1,139 @@
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">日历事件的标题</view>
+  <input
+  class="input"
+  type="text"
+  bindinput="handleTitleInput"
+  />
+</view>
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">请选择日历事件的开始日期</view>
+    <picker mode="date" value="{{startTimeDate}}" bindchange="bingStartTimeDateChange" fields="day">
+        <view class="picker">
+            当前选择: {{startTimeDate}}
+        </view>
+    </picker>
+</view>
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">请选择日历事件的开始时间</view>
+    <picker mode="time" value="{{startTimeTime}}" bindchange="bingStartTimeTimeChange">
+      <view class="picker">
+        当前选择: {{startTimeTime}}
+      </view>
+    </picker>
+  </view>
+  <view class="page-section">
+    <view class="page-section-title page-section-title-space">请选择日历事件的结束日期（可选）</view>
+    <picker mode="date" value="{{endTimeDate}}" bindchange="bingEndTimeDateChange" fields="day">
+        <view class="picker">
+            当前选择: {{endTimeDate}}
+        </view>
+    </picker>
+</view>
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">请选择日历事件的结束时间（可选）</view>
+    <picker mode="time" value="{{endTimeTime}}" bindchange="bingEndTimeTimeChange">
+      <view class="picker">
+        当前选择: {{endTimeTime}}
+      </view>
+    </picker>
+</view>
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">日历事件说明（可选）</view>
+  <input
+  class="input"
+  type="text"
+  bindinput="handleDescInput"
+/>
+</view>
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">日历事件位置（可选）</view>
+  <input
+  class="input"
+  type="text"
+  bindinput="handleLocationInput"
+/>
+</view>
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">是否设置提醒（默认不设置）</view>
+  <radio-group bindchange="alarmChange">
+    <label class="radio">
+      <radio
+        value=true
+        color="#F85959"
+      />设置
+    </label>
+    <label class="radio">
+      <radio checked="true" value=false  color="#F85959" />不设置
+    </label>
+  </radio-group>
+</view>
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">重复周期（默认不重复）</view>
+  <radio-group bindchange="repeatIntervalChange">
+    <label class="radio">
+      <radio
+        value="never"
+        color="#F85959"
+        checked="true"
+      />never
+    </label>
+    <label class="radio">
+      <radio value="day"  color="#F85959" />day
+    </label>
+    <label class="radio">
+      <radio value="week"  color="#F85959" />week
+    </label>
+    <label class="radio">
+      <radio value="month"  color="#F85959" />month
+    </label>
+    <label class="radio">
+      <radio value="year"  color="#F85959" />year
+    </label>
+  </radio-group>
+</view>
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">重复间隔（可选）</view>
+  <input
+  class="input"
+  type="number"
+  bindinput="handleRepeatStepInput"
+/>
+</view>
+
+<view class="page-section">
+    <view class="page-section-title page-section-title-space">重复周期结束时间的时间（可选）</view>
+    <picker mode="date" value="{{repeatEndTimeDate}}" bindchange="bingRepeatEndTimeDateChange" fields="day">
+        <view class="picker">
+            当前选择: {{repeatEndTimeDate}}
+        </view>
+    </picker>
+</view>
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">重复周期结束时间的时间（可选）</view>
+  <picker mode="time" value="{{repeatEndTimeTime}}" bindchange="bingRepeatEndTimeTimeChange">
+    <view class="picker">
+      当前选择: {{repeatEndTimeTime}}
+    </view>
+  </picker>
+</view>
+
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">提醒提前量（单位：分钟）（可选）</view>
+  <input
+  class="input"
+  type="number"
+  bindinput="handleAlarmOffsetInput"
+/>
+</view>
+<view class="btn-area">
+    <button type="primary" bindtap="addCalendar">addCalendar</button>
+</view>
+<view class="ttui-cell mt">
+  <view class="ttui-cell__hd">
+    <view class="ttui-label">结果</view>
+  </view>
+  <view class="ttui-cell__bd">
+    <text class="ttui-input">{{result}}</text>
+  </view>
+</view>

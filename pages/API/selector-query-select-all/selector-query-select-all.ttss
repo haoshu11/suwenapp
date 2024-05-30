@@ -1,0 +1,24 @@
+.box {
+  margin: 100rpx auto;
+  width: 100rpx;
+  height: 100rpx;
+  background: #999;
+}
+.body {
+  padding: 30rpx;
+  background: #fff;
+}
+.body view {
+  height: 50rpx;
+  line-height: 50rpx;
+  border-bottom: 1px solid #ddd;
+}
+.title {
+  height: 50rpx;
+  line-height: 50rpx;
+  border-bottom: 1rpx solid #eaeaea;
+}
+
+.footer {
+  height: 50rpx;
+}

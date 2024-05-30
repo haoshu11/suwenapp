@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="btn-area">
+    <button type="primary" disabled="{{socketStatus === 'open'}}" bindtap="createSocket">创建socket</button>
+    <button type="primary" disabled="{{socketStatus !== 'open'}}" bindtap="sendMessage">发送消息</button>
+    <button type="primary" disabled="{{socketStatus !== 'open'}}" bindtap="closeSocket">关闭Socket</button>
+  </view>
+</view>

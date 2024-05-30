@@ -1,0 +1,8 @@
+<view class="live-play">
+  <live-player class="my-live" id="myLivePlayer" src="{{src}}" muted="{{muted}}" orientation="{{orientation}}"
+    object-fit="{{objectFit}}" autoplay="{{autoplay}}" bindfullscreenchange="onFullScreenChange" binderror="onError">
+  </live-player>
+  <button type="primary" bindtap="livePlay">开始播放 play</button>
+  <button type="primary" bindtap="liveStop">停止播放 stop</button>
+  <button type="primary" bindtap="liveMute">{{muted ? '不' : ''}}静音</button>
+</view>

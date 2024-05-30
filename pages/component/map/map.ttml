@@ -1,0 +1,132 @@
+<map
+  id="myMap"
+  show-location="{{showLocation}}"
+  longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  circles="{{circles}}"
+  markers="{{markers}}"
+  polyline="{{polyline}}"
+  scale="{{scale}}"
+  rotate="{{rotate}}"
+  skew="{{skew}}"
+  polygons="{{polygons}}"
+  include-points="{{includePoints}}"
+  show-compass="{{showCompass}}"
+  enable-overlooking="{{enableOverlooking}}"
+  enable-rotate="{{enableRotate}}"
+  min-scale="{{minScale}}"
+  max-scale="{{maxScale}}"
+  show-scale="{{showScale}}"
+  enable-3D="{{enable3D}}"
+  enable-zoom="{{enableZoom}}"
+  enable-scroll="{{enableScroll}}"
+  enable-satellite="{{enableSatellite}}"
+  enable-traffic="{{enableTraffic}}"
+  enable-poi="{{enablePoi}}"
+  enable-building="{{enableBuilding}}"
+  bindtap="mapTap"
+  bindmarkertap="markerTap"
+  bindcallouttap="calloutTap"
+  bindregionchange="regionChange"
+  bindlabeltap="labelTap"
+  bindupdated="updated"
+  bindanchorpointtap="anchorpointTap"
+></map>
+<scroll-view class="container">
+  <view class="container-item">
+    <button bindtap="authLocation" type="primary" size="mini">申请定位权限</button>
+    <button bindtap="moveToLocation" type="primary" size="mini">移动到当前定位点</button>
+    <button bindtap="getCenterLocation" type="primary" size="mini">获取当前地图中心位置</button>
+    <button bindtap="getScale" type="primary" size="mini">获取缩放级别</button>
+    <button bindtap="getRegion" type="primary" size="mini">获取地图视野</button>
+  </view>
+  <view class="container-item">
+    是否显示当前位置：
+    <switch checked="{{showLocation}}" bindtap="onSwitchShowLocation" />
+  </view>
+  <view class="container-item">
+    路线数组：
+    <view
+      class="polygons-item"
+      tt:for="{{polygons[0].points}}"
+      tt:for-item="pointItem"
+      tt:for-index="pointIndex"
+      tt:key="pointIndex"
+    >
+    <text class="point-item">经度: {{ pointItem.longitude }}</text>
+      <text class="point-item">纬度: {{ pointItem.latitude }}</text>
+    </view>
+  </view>
+  <view class="container-item">
+    旋转角度：
+    <slider
+      min="0"
+      max="360"
+      disabled="{{!enableRotate}}"
+      value="{{rotate}}"
+      show-value="{{true}}"
+      block-size="{{28}}"
+      block-color="#fff"
+      bindchange="onChangeRotate"
+    />
+  </view>
+  <view class="container-item">
+    倾斜角度：{{ skew }}
+  </view>
+  <view class="container-item">
+    缩放级别范围
+    <text>{{ minScale }} - {{ maxScale }}</text>
+  </view>
+  <view class="container-item">
+    设置最小缩放级别：
+    <input type="number" max="{{maxScale}}" data-name="minScale" value="{{minScale}}" bindinput="onChangeScale" />
+  </view>
+  <view class="container-item">
+    设置最大缩放级别：
+    <input type="number" min="{{minScale}}" data-name="maxScale" value="{{maxScale}}" bindinput="onChangeScale" />
+  </view>
+  <view class="container-item">
+    显示指南针：
+    <switch checked="{{showCompass}}" bindtap="onSwitchShowCompass" />
+  </view>
+  <view class="container-item">
+    开启俯视手势支持：
+    <switch checked="{{enableOverlooking}}" bindtap="onSwitchEnableOverlooking" />
+  </view>
+  <view class="container-item">
+    开启旋转手势支持：
+    <switch checked="{{enableRotate}}" bindtap="onSwitchEnableRotate" />
+  </view>
+  <view class="container-item">
+    是否展示 3D 楼块（该属性 IOS 不支持）：
+    <switch checked="{{enable3D}}" bindtap="onSwitchEnable3D" />
+  </view>
+  <view class="container-item">
+    是否显示比例尺：
+    <switch checked="{{showScale}}" bindtap="onSwitchShowScale" />
+  </view>
+  <view class="container-item">
+    是否支持缩放：
+    <switch checked="{{enableZoom}}" bindtap="onSwitchEnableZoom" />
+  </view>
+  <view class="container-item">
+    是否支持拖动：
+    <switch checked="{{enableScroll}}" bindtap="onSwitchEnableScroll" />
+  </view>
+  <view class="container-item">
+    是否开启卫星图：
+    <switch checked="{{enableSatellite}}" bindtap="onSwitchEnableSatellite" />
+  </view>
+  <view class="container-item">
+    是否开启实时路况（在该属性为 true 时，enable- building 和 enable-3D 无效）：
+    <switch checked="{{enableTraffic}}" bindtap="onSwitchEnableTraffic" />
+  </view>
+  <view class="container-item">
+    是否显示地名：
+    <switch checked="{{enablePoi}}" bindtap="onSwitchEnablePoi" />
+  </view>
+  <view class="container-item">
+    是否展示建筑物：
+    <switch checked="{{enableBuilding}}" bindtap="onSwitchEnableBuilding" />
+  </view>
+</scroll-view>

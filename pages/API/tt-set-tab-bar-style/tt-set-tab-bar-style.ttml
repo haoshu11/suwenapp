@@ -1,0 +1,5 @@
+<view class="control-area">
+  <view class="btn-area">
+    <button bindtap="toggleTabBarStyle">{{hasCustomedStyle?'清除自定义样式':'设置 TabBar 的样式'}}</button>
+  </view>
+</view>

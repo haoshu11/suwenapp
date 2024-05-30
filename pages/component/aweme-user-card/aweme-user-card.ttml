@@ -1,0 +1,12 @@
+<view class="container">
+    <view class="page-body">
+        <view class="page-body-wrapper">
+            <text class="page-body-title">
+                小程序关注抖音号组件：
+            </text>
+            <view>
+                <aweme-user-card aweme-id="176793430" binderror="errorHandler"></aweme-user-card>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <text class="page-body-title">
+        监听窗口尺寸变化：
+      </text>
+      <view class="page-body-line">
+        <button type="primary" bindtap="onWindowResize">监听窗口事件</button>
+        <button class="btn" type="primary" bindtap="offWindowResize">卸载监听窗口事件</button>
+      </view>
+      <view class='page-body-text'>
+        窗口高度: {{height}}
+      </view>
+      <view class='page-body-text'>
+        窗口宽度: {{width}}
+      </view>
+    </view>
+  </view>
+</view>

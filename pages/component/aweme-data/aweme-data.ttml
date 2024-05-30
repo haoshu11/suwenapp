@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <text class="page-body-title">
+        小程序直播间状态组件：
+      </text>
+      <view>
+        <aweme-data aweme-id="176793430" type="{{showType}}" disable-default="{{disableDefault}}" default-text="抖音小程序"
+          binderror="errorHandler" bindtap="onAvatarClick"></aweme-data>
+      </view>
+      <button class="page-body-btn" ontap="swichType">点击切换为展示昵称</button>
+      <button class="page-body-btn" ontap="disableJump">点击禁用头像点击的默认行为</button>
+      <view class='page-body-text'>
+        不禁用默认行为，点击头像时，如果用户处于直播状态下会跳转到直播间，非直播状态下跳转到个人主页
+      </view>
+      <view class='page-body-text'>
+        禁用默认行为点击头像时不会有任何的跳转行为
+      </view>
+    </view>
+  </view>
+</view>

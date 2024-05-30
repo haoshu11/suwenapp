@@ -1,0 +1,2 @@
+<button type="primary" bindtap="setStorage" disabled="{{hasStore}}" >设置缓存(key: "byte", data: "dance")</button>
+<button type="primary" bindtap="getStorage" disabled="{{!hasStore}}">获取key为"byte"的缓存(同步)</button>

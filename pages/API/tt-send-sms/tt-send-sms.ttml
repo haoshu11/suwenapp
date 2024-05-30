@@ -1,0 +1,20 @@
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">要发送的号码（可选）</view>
+  <input
+  class="input"
+  type="text"
+  bindinput="handlePhoneNumberInput"
+  />
+</view>
+<view class="page-section">
+  <view class="page-section-title page-section-title-space">要发送的内容（可选）</view>
+  <input
+  class="input"
+  type="text"
+  bindinput="handleContentInput"
+  />
+</view>
+
+<view class="btn-area">
+    <button type="primary" bindtap="sendSms">sendSms</button>
+</view>

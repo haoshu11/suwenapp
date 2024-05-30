@@ -1,0 +1,11 @@
+<!-- 一个全屏宽高的元素，使得下方的 #target 节点的初始位置位于手机屏幕之外-->
+<view class="container">
+  <view class="page-section-title-space page-section-title">
+    指定页面显示区域作为参照区域之一，例如：参照区域为整个屏幕可视范围, 向上滑动至目标元素进入参照区域可以看见效果
+  </view>
+  <view class="box-is-visible-tip">
+    {{ isShow ? "target visible" : "target Invisible" }}
+  </view>
+</view>
+<!-- 待观测的节点 -->
+<view id="target"></view>

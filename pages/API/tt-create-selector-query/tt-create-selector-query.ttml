@@ -1,0 +1,42 @@
+<view class="container" tt:if="{{!useComponent}}">
+  <view tt:if="{{scroll}}" style="height: 600px;"></view>
+  <view class="box"></view>
+  <view class="body">
+    <view class="title">width: {{nodes.width}}</view>
+    <view class="title">height: {{nodes.height}}</view>
+    <view class="title">top: {{nodes.top}}</view>
+    <view class="title">bottom: {{nodes.bottom}}</view>
+    <view class="title">left: {{nodes.left}}</view>
+    <view class="title">right: {{nodes.right}}</view>
+    <view class="title">scrollLeft: {{scrollInfo.scrollLeft}}</view>
+    <view class="title">scrollTop: {{scrollInfo.scrollTop}}</view>
+  </view>
+  <view class="btn-area">
+    <button type="primary" size="mini" bindtap="getScroll">{{!scroll?'滚动位置':'清除'}}</button>
+    <button type="primary" size="mini" style="width: 400rpx" bindtap="getFields">{{!fields?'指定只返回节点尺寸信息':'返回所有信息'}}</button>
+  </view>
+  <view class="btn-area">
+    <button type="primary" bindtap="getAllInfo">获取所有类名为btn-area的元素信息</button>
+  </view>
+</view>
+<my-component tt:if="{{useComponent}}"></my-component>
+<view class="btn-area">
+  <button type="primary" size="default" bindtap="useComponent">{{!useComponent?'在自定义组件中使用':'返回页面'}}</button>
+</view>
+<view tt:if="{{showAllInfo}}">
+  <view class="mask"></view>
+  <view class="selector-content">
+    <view class="toast-title">所有 btn-area 类节点信息</view>
+    <view class="info">
+      <view class="column">
+        <view tt:for="{{paramsArr}}" class="params">{{item}}</view>
+      </view>
+      <view class="column" tt:for="{{btnFields}}" tt:for-item="fieldItem">
+        <view tt:for="{{fieldItem}}" class="params">{{item}}</view>
+      </view>
+    </view>
+    <view class="cancel-button" bindtap="cancelAllInfo">
+      取消
+    </view>
+  </view>
+</view>

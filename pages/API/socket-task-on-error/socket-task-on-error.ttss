@@ -1,0 +1,4 @@
+.tip {
+    margin-bottom: 20rpx;
+    text-align: center;
+}

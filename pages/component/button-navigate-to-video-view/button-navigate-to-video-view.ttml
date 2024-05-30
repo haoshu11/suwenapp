@@ -1,0 +1,25 @@
+<view class="container">
+    <view class="page-body">
+        <view class="page-body-wrapper">
+            <text class="page-body-title">
+                跳转视频播放页
+            </text>
+            <view class="page-body-line">
+                <button open-type="share" bindtap="shareVideo">点击分享视频</button>
+                <button
+                class="btn"
+                disabled="{{!videoId}}"
+                open-type="navigateToVideoView"
+                data-video-id="{{videoId}}"
+                bindnavigatetovideoview="eventHandler"
+              >
+                跳转视频播放页
+              </button>
+            </view>
+            <view class='page-body-text'>
+                获取结果：
+                {{result}}
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+<view class="control-area">
+  <view class="btn-area">
+    <button bindtap="setTabBarBadge">{{addText?"移除文本":"添加文本"}}</button>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+.result-wrap {
+    display: block;
+    box-sizing: border-box;
+    padding: 20rpx;
+    width: 100%;
+    height: 600px;
+}
+.timeline {
+    float: left;
+    width: 10%;
+    height: 90px;
+}
+.circle {
+    width:10px; 
+    height:10px; 
+    border-radius:50%; 
+    background-color:#F85959;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.line {
+    margin: 3px;
+    width:4px; 
+    height:70px; 
+    background-color:#F85959;
+}
+.content {
+    float:right;
+    width: 90%;
+    height: 90px;
+    font-size: 15px;
+    color: #999999;
+}
+.clear-btn {
+    margin-top: 20rpx;
+}

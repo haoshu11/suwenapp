@@ -1,0 +1,18 @@
+<map id="myMap" style="width: 100%; height: 300px;" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" circles="{{circles}}" show-location scale="{{scale}}" />
+<view class="btn-area">
+  <button disabled="{{ !!mapContext }}" type="primary" bindtap="createMapContext">创建 map 上下文 mapContext 对象</button>
+</view>
+
+<view class="map-context-list" tt:if="{{mapContext}}">
+  <view class="title">MapContext 信息</view>
+
+  <view class="item">
+    经度：{{ longitude }}
+  </view>
+  <view class="item">
+    纬度：{{ latitude }}
+  </view>
+  <view class="item">
+    触发回调时地图的缩放级别：{{ scale }}
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="title">当前页面的路由层级：{{length}}</view>
+  <view class="intro">redirectTo 跳转页面后将关闭当前页面，跳转到应用内的某个页面，不能跳转到 tabBar 页面。</view>
+  <view class="btn-area">
+    <button type="primary" bindtap="onItemClick">redirectTo跳转页面</button>
+  </view>
+</view>

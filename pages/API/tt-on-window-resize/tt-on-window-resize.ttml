@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <text class="page-body-title">
+        监听窗口尺寸变化：
+      </text>
+      <view class="page-body-line">
+        <button type="primary" bindtap="windowResize">注册事件</button>
+      </view>
+      <view class='page-body-text'>
+        窗口高度: {{height}}
+      </view>
+      <view class='page-body-text'>
+        窗口宽度: {{width}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+.body-space .page-session {
+    padding: 10rpx 0;
+    border-bottom: 1rpx solid transparent;
+    box-sizing: border-box;
+}
+
+.body-space.ad-display-page .page-session .page-section-title {
+    padding: 0;
+}
+
+.body-space .page-session .ttui-input {
+    background-color: #fff;
+    border-radius: 2rpx;
+}

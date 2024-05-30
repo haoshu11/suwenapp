@@ -1,0 +1,20 @@
+<view class="title">
+  实例获取位置
+</view>
+
+<canvas id="myCanvas" type="2d"></canvas>
+
+<view class="btn-area">
+  <button id="myButton" data-key="bytedance" type="primary" data-type="fields" size="default" bindtap="getCanvas">
+    通过 fields 方法获取
+  </button>
+  <button type="primary" size="default" data-type="node" bindtap="getCanvas">通过 node 方法获取</button>
+  <button type="primary" bindtap="clearInfos"> 清空 </button>
+</view>
+
+<view class="node-info-list">
+  <view class="list-title">{{ nodeTitle }}</view>
+  <view tt:for="{{ nodeInfo }}" tt:for-item="item" class="list-item">
+    {{ item }}
+  </view>
+</view>

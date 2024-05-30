@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="page-body">
+      <view class="page-body-wrapper">
+          <text class="page-body-title">
+              点击跳转抖音直播间
+          </text>
+          <view class="page-body-line">
+            <button
+            open-type="openWebcastRoom"
+            bindopenwebcastroom="eventHandler"
+            data-aweme-id="{{awemeId}}"
+          >
+            跳转抖音直播间
+          </button>
+          </view>
+          <view class='page-body-text'>
+              获取结果：
+              {{result}}
+          </view>
+      </view>
+  </view>
+</view>

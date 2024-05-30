@@ -1,0 +1,42 @@
+image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.tips {
+  font-size: 24px;
+  text-align: center;
+}
+
+.page-body-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60rpx;
+}
+
+.page-body-button-play,
+.page-body-button-stop {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 20rpx;
+}
+
+.page-body-button-play.btn-disabled,
+.page-body-button-stop.btn-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-body-button-play:not(.btn-disabled):hover,
+.page-body-button-stop:not(.btn-disabled):hover {
+  background-color: #eee;
+}
+
+.label {
+  font-size: 22px;
+  margin-top: 30rpx;
+}

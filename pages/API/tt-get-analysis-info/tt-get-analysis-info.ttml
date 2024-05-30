@@ -1,0 +1,5 @@
+<view class="content">
+    <view class="title">获取小程序的流量归因参数。</view>
+    <button type="primary" bindtap="getAnalysisInfo" size="default">{{empty? '点击获取小程序流量归因参数':'清空'}} </button>
+    <view class="footer">{{analysisInfo}}</view>
+</view>

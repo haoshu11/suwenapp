@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="content">
+    <view class="left">
+      <text class="title">主线程</text>
+      <view class="message">
+        <view tt:if="{{mainAllMsg.length === 0}}">消息监听中...</view>
+        <scroll-view class="listener" scroll-y="{{true}}">
+          <view tt:for="{{mainAllMsg}}">{{item}}</view>
+        </scroll-view>  
+      </view>
+    </view>
+    <view class="right">
+      <text class="title">Worker 线程</text>
+      <view class="message">
+        <view tt:if="{{workerAllMsg.length === 0}}">消息监听中...</view>
+        <scroll-view class="listener" scroll-y="{{true}}">
+          <view tt:for="{{workerAllMsg}}">{{item}}</view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="center">
+      <view class="line"></view>
+    </view>
+  </view>
+  <view class="btn-area">
+    <button type="primary" bindtap="createWorker">创建 Worker 线程</button>
+    <button type="primary" bindtap="postMessage">主线程发送消息给 Worker 线程</button>
+    <button type="primary" bindtap="workerPostMessage">Worker 线程发送消息给主线程</button>
+    <button type="primary" bindtap="terminateWorker">销毁 Worker 线程</button>
+  </view>
+</view>

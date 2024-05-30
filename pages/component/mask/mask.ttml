@@ -1,0 +1,5 @@
+<view>
+    <button bindtap="showMask">展示 mask（3 秒后隐藏）</button>
+</view>
+
+<mask hidden="{{hidden}}"></mask>
